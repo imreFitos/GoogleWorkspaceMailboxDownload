@@ -1,0 +1,4 @@
+# we use json files for permanent and temporary credential storage so let's not commit those
+*.json
+# ignore the local copy of the gdata package
+src/
