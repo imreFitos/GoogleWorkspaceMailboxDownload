@@ -16,7 +16,7 @@ Errors: frequently Google returns a 500 Internal Error. There is no rhyme nor re
 
 This is a python script, it works with the current version 3 of python.
 
-### DInstall python dependencies
+### Install python dependencies
 
 ```
 # the public version is old and is missing a str/bytes fix so you need to download the latest:
@@ -24,7 +24,7 @@ pip3 install -e git+https://github.com/dvska/gdata-python3#egg=gdata
 pip3 install requests oauth2client tqdm
 ```
 
-### setup GPG 1.4 and create encryption/decryption key.
+### Setup GPG 1.4 and create encryption/decryption key.
 
 You have to create a public/private key because the resulting mailbox archives are encrypted. Instructions are in Google's documentation, it has to be a PGP format ASCII-encoded RSA key. YOU HAVE TO USE GnuPG 1.4 - newer versions won't work according to Google. On a mac you could use "brew install gnupg@1.4" if you have homebrew installed.
 
@@ -35,12 +35,12 @@ Google allows you to override the existing encryption key in their system by upl
 
 ### Setup access credentials in Google Cloud for the script:
 
-1. You have to create your own google cloud app in https://console.cloud.google.com/ I call my cloud app "GoogleWorkspaceMailboxDownload"
+1. You have to create your own google cloud app project in https://console.cloud.google.com/ I call my cloud app "GoogleWorkspaceMailboxDownload"
 
-1.1. Setup an Oauth 2 Client with a scope to access the email audit API, and download the client credentials:
+2. Under this newly created project, setup an Oauth 2 Client with a scope to access the email audit API, and download the client credentials:
 
 Documentation is in the Google doc above. TL:DR under your google cloud project "GoogleWorkspaceMailboxDownload" create a Oauth 2.0 client ID (Desktop type). Add the scope "https://apps-apis.google.com/a/feeds/compliance/audit/". Download the client's secret as JSON (under APIs & Services -> Credentials) and save it as client_secrets.json.
-ZZ
+
 ## Usage
 
 1. Setup GPG, create your key, export the public key, upload the key using this script. For creation of key, please use the Google Documentation at the beginning of this readme.
