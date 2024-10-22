@@ -2,7 +2,7 @@
 
 Convenience script to download Google Workspace user mailboxes through the official Email Audit API. Works with python3.
 
-This script uses an old email audit API that allows exporting even suspended people's mailbox contents, as long as you are the admin of the workspace.
+This script uses an old email audit API that allows exporting even suspended people's mailbox contents, as long as you are the admin of the workspace. If you hit the limits of Google Workspace Data Export, this script is for you.
 
 Based on Google's documentation at https://developers.google.com/admin-sdk/email-audit/download-mailbox
 
